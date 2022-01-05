@@ -1,134 +1,91 @@
-﻿|PAGE30|||
-| :- | :-: | -: |
+**Automate High availability**
 
-Automate High availability
+[HA cluster introduction](#ha-cluster-introduction)
 
-TOC \o \z \u \h[HA cluster introduction	PAGEREF _Toc1735579699 \h2](#_Toc1735579699)
+HA Components
 
-[HA Components	PAGEREF _Toc1457453763 \h3](#_Toc1457453763)
+High availability Architecture
+- Reference Architecture(#Reference Architecture)
+- Automate Backend Cluster
+- Automate Frontend Cluster
+- Deployment Support Types
+    - AWS Deployment
+    - Bare Infrastructure Deployment
 
-[High availability Architecture	PAGEREF _Toc352595509 \h4](#_Toc352595509)
+System and software requirements
+-   Platform support
+-   Virtual Machine (VM) Instances Type 
 
-[Reference Architecture	PAGEREF _Toc1674402493 \h4](#_Toc1674402493)
+Bastion host 
+-   Bastion Introduction 
+-   Bastion Host Setup 
 
-[Automate Backend Cluster	PAGEREF _Toc470756001 \h4](#_Toc470756001)
+Getting started
+- Package download
 
-[Automate Frontend Cluster	PAGEREF _Toc370139149 \h4](#_Toc370139149)
+Configuration and Provisioning – Cloud 
+-   Cloud System Requirements 
+-   Virtual Machine (VM) Instances Type 
+-   Amazon’s Virtual Private Cloud (VPC) 
+    -   VPC requirements
+    -   Amazon’s Virtual Private Cloud (VPC) Limit
+-   Configuration￼ 
+-   Provisioning
+    - AWS provisioning 
 
-[Deployment Support Types	PAGEREF _Toc1300465887 \h5](#_Toc1300465887)
+On-prem Configuration 
+-   On-prem Prerequisite 
+-   Configuration ￼ ￼ 
 
-[AWS Deployment	PAGEREF _Toc23116399 \h5](#_Toc23116399)
+Validation 
 
-[Bare Infrastructure Deployment	PAGEREF _Toc14734623 \h5](#_Toc14734623)
+Installation 
+-   Air-gapped installation 
 
-[System and software requirements	PAGEREF _Toc2051477031 \h5](#_Toc2051477031)
+Backup and restore 
+-   Pre-back-up configuration
+    - ES configuration and setup 
+    - S3 Configuration for backup 
+    - File System (EFS)Configuration for backup 
+- Backup 
+- Restore 
 
-[Platform support	PAGEREF _Toc1071771892 \h5](#_Toc1071771892)
+Upgrade 
 
-[Virtual Machine (VM) Instances Type	PAGEREF _Toc1422389617 \h6](#_Toc1422389617)
+Migration 
+- Chef server (HA- backend) to Automate 
+    - Backup on your existing chef-server
+    - Restore to Chef Automate HA chef-server 
 
-[Bastion host	PAGEREF _Toc857065517 \h6](#_Toc857065517)
+- Existing A2HA to Automate HA 
 
-[Bastion Introduction	PAGEREF _Toc864442506 \h6](#_Toc864442506)
+- A2 to Automate HA 
 
-[Bastion Host Setup	PAGEREF _Toc1074597171 \h6](#_Toc1074597171)
+Performance benchmarking 
 
-[Getting started	PAGEREF _Toc1878638185 \h7](#_Toc1878638185)
+Certificates renewal
 
-[Package download	PAGEREF _Toc1992039151 \h7](#_Toc1992039151)
+Security and firewall 
+- Incoming frontends network traffic 
+- Incoming Elastic-search backend network traffic 
+- Incoming PostgreSQL backend network traffic 
 
-[Configuration and Provisioning – Cloud	PAGEREF _Toc1755130240 \h7](#_Toc1755130240)
+Troubleshooting guide
+- Restore issues 
+    - Error: Database is being accessed by other users 
+    - Error: Cached artifact not found in offline mode 
+    - Error: Existing arch does not match the requested one. 
+    - Other Errors
 
-[Cloud System Requirements	PAGEREF _Toc206866167 \h7](#_Toc206866167)
+Appendix 
 
-[Virtual Machine (VM) Instances Type	PAGEREF _Toc1463986513 \h7](#_Toc1463986513)
+- What to change in config.toml 
 
-[Amazon’s Virtual Private Cloud (VPC)	PAGEREF _Toc2071204290 \h8](#_Toc2071204290)
+- What to write in cidr block 
 
-[VPC requirements	PAGEREF _Toc1012289915 \h8](#_Toc1012289915)
+- How to set vpc 
 
-[Amazon’s Virtual Private Cloud (VPC) Limit	PAGEREF _Toc821219597 \h8](#_Toc821219597)
-
-[Configuration￼	PAGEREF _Toc672637901 \h9](#_Toc672637901)
-
-[Provisioning	PAGEREF _Toc1402858549 \h9](#_Toc1402858549)
-
-[AWS provisioning	PAGEREF _Toc322668150 \h9](#_Toc322668150)
-
-[On-prem Configuration	PAGEREF _Toc1675936222 \h11](#_Toc1675936222)
-
-[On-prem Prerequisite	PAGEREF _Toc1901740272 \h11](#_Toc1901740272)
-
-[Configuration ￼ ￼	PAGEREF _Toc2023204849 \h11](#_Toc2023204849)
-
-[Validation	PAGEREF _Toc1393399874 \h13](#_Toc1393399874)
-
-[Installation	PAGEREF _Toc1753984586 \h13](#_Toc1753984586)
-
-[Air-gapped installation	PAGEREF _Toc263100213 \h13](#_Toc263100213)
-
-[Backup and restore	PAGEREF _Toc881996409 \h13](#_Toc881996409)
-
-[Pre-back-up configuration:	PAGEREF _Toc1731959389 \h13](#_Toc1731959389)
-
-[ES configuration and setup	PAGEREF _Toc675192601 \h14](#_Toc675192601)
-
-[S3 Configuration for backup	PAGEREF _Toc1381317600 \h15](#_Toc1381317600)
-
-[File System (EFS)Configuration for backup	PAGEREF _Toc266541933 \h18](#_Toc266541933)
-
-[Backup	PAGEREF _Toc1216523958 \h18](#_Toc1216523958)
-
-[Restore	PAGEREF _Toc207232882 \h18](#_Toc207232882)
-
-[Upgrade	PAGEREF _Toc444249810 \h18](#_Toc444249810)
-
-[Migration	PAGEREF _Toc1247082504 \h18](#_Toc1247082504)
-
-[Chef server (HA- backend) to Automate HA	PAGEREF _Toc1626081780 \h18](#_Toc1626081780)
-
-[Backup on your existing chef-server:	PAGEREF _Toc51881102 \h19](#_Toc51881102)
-
-[Restore to Chef Automate HA chef-server	PAGEREF _Toc174870704 \h20](#_Toc174870704)
-
-[Existing A2HA to Automate HA	PAGEREF _Toc2055014839 \h20](#_Toc2055014839)
-
-[A2 to Automate HA	PAGEREF _Toc1188665617 \h21](#_Toc1188665617)
-
-[Performance benchmarking	PAGEREF _Toc1562555762 \h21](#_Toc1562555762)
-
-[Certificates renewal	PAGEREF _Toc630760781 \h22](#_Toc630760781)
-
-[Security and firewall	PAGEREF _Toc781351583 \h24](#_Toc781351583)
-
-[Incoming frontends network traffic	PAGEREF _Toc662962349 \h24](#_Toc662962349)
-
-[Incoming Elastic-search backend network traffic	PAGEREF _Toc1201987608 \h24](#_Toc1201987608)
-
-[Incoming PostgreSQL backend network traffic	PAGEREF _Toc436217869 \h25](#_Toc436217869)
-
-[Troubleshooting guide	PAGEREF _Toc1837687017 \h25](#_Toc1837687017)
-
-[Restore issues	PAGEREF _Toc480506405 \h25](#_Toc480506405)
-
-[Error: Database is being accessed by other users	PAGEREF _Toc1934746086 \h25](#_Toc1934746086)
-
-[Error: Cached artifact not found in offline mode	PAGEREF _Toc549175437 \h26](#_Toc549175437)
-
-[Error: Existing arch does not match the requested one.	PAGEREF _Toc1995087369 \h26](#_Toc1995087369)
-
-[Other Errors:	PAGEREF _Toc1745166756 \h26](#_Toc1745166756)
-
-[Appendix	PAGEREF _Toc1522583186 \h28](#_Toc1522583186)
-
-[What to change in config.toml	PAGEREF _Toc2002284643 \h28](#_Toc2002284643)
-
-[What to write in cidr block	PAGEREF _Toc790914871 \h28](#_Toc790914871)
-
-[How to set vpc	PAGEREF _Toc1363312911 \h28](#_Toc1363312911)
-
-#
-# HA cluster introduction
+## HA cluster introduction
 **High availability (HA)** refers to a system or application (such as a network, a server array, or cluster) that offers a high level of operational performance and quality over a relevant time with maximum potential uptime and accessibility for the content stored on it.
 
 While a more basic system will be adequate to serve content to a low or medium number of users, it may include a single point of failure. This means that if one server goes down, whether due to traffic overload or any number of other issues, the entire site or application could become unavailable.
