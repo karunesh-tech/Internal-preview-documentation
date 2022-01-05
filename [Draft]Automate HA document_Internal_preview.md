@@ -2,88 +2,88 @@
 
 [HA cluster introduction](#ha-cluster-introduction)
 
-HA Components
+[HA Components](#ha-components)
 
-High availability Architecture
-- Reference Architecture(#Reference Architecture)
-- Automate Backend Cluster
-- Automate Frontend Cluster
-- Deployment Support Types
-    - AWS Deployment
-    - Bare Infrastructure Deployment
+[High availability Architecture](#high-availability-architecture)
+- [Reference Architecture](#reference-architecture)
+- [Automate Backend Cluster](#automate-backend-cluster)
+- [Automate Frontend Cluster](#automate-frontend-cluster)
+- [Deployment Support Types](#deployment-support-types)
+    - [AWS Deployment](#aws_deployment)
+    - [Bare Infrastructure Deployment](#bare-infrastructure-deployment)
 
-System and software requirements
--   Platform support
--   Virtual Machine (VM) Instances Type 
+[System and software requirements](#system-and-software-requirements)
+-   [Platform support](#platform-support)
+-   [Virtual Machine (VM) Instances Type](#virtual-machine-instances-type) 
 
-Bastion host 
--   Bastion Introduction 
--   Bastion Host Setup 
+[Bastion host]](#bastion-host)
+-   [Bastion Introduction](#bastion-introduction) 
+-   [Bastion Host Setup](#bastion-host-setup) 
 
-Getting started
-- Package download
+[Getting started](#getting-started)
+- [Package download](#package-download)
 
-Configuration and Provisioning – Cloud 
--   Cloud System Requirements 
--   Virtual Machine (VM) Instances Type 
--   Amazon’s Virtual Private Cloud (VPC) 
-    -   VPC requirements
-    -   Amazon’s Virtual Private Cloud (VPC) Limit
--   Configuration￼ 
--   Provisioning
-    - AWS provisioning 
+[Configuration and Provisioning – Cloud](#configuration-and-provisioning) 
+-   [Cloud System Requirements](#cloud-system-requirements) 
+-   [Virtual Machine (VM) Instances Type](#virtual-machine-instances-type) 
+-   [Amazon’s Virtual Private Cloud (VPC)](#amazon’s-virtual-private-cloud) 
+    -   [VPC requirements](#vpc-requirements)
+    -   [Amazon’s Virtual Private Cloud (VPC) Limit](#)
+-   [Configuration](#configuration)
+-   [Provisioning](#provisioning)
+    - [AWS provisioning](#aws-provisioning) 
 
-On-prem Configuration 
--   On-prem Prerequisite 
--   Configuration ￼ ￼ 
+[On-prem Configuration](#on-prem-configuration) 
+-   [On-prem Prerequisite](#on-prem-prerequisite) 
+-   [Configuration](#configuration)
 
-Validation 
+[Validation](#validation) 
 
-Installation 
--   Air-gapped installation 
+[Installation](#installation) 
+-   [Air-gapped installation](#air-gapped-installation) 
 
-Backup and restore 
--   Pre-back-up configuration
-    - ES configuration and setup 
-    - S3 Configuration for backup 
-    - File System (EFS)Configuration for backup 
-- Backup 
-- Restore 
+[Backup and restore](#backup-and-restore) 
+-   [Pre-back-up configuration](#pre-back-up-configuration)
+    - [ES configuration and setup](#es-configuration-and-setup) 
+    - [S3 Configuration for backup](#s3-configuration-for-backup) 
+    - [File System (EFS)Configuration for backup](#file-system-(efs)-configuration-for-backup) 
+- [Backup](#backup) 
+- [Restore](#restore) 
 
-Upgrade 
+[Upgrade](#upgrade) 
 
-Migration 
-- Chef server (HA- backend) to Automate 
-    - Backup on your existing chef-server
-    - Restore to Chef Automate HA chef-server 
+[Migration](#migration) 
+- [Chef server (HA- backend) to Automate](#chef-server-to-automate) 
+    - [Backup on your existing chef-server](#backup-on-your-existing-chef-server)
+    - [Restore to Chef Automate HA chef-server](#restore-to-chef-automate-ha-chef-server) 
 
-- Existing A2HA to Automate HA 
+- [Existing A2HA to Automate HA](#existing-a2ha-to-automate-HA) 
 
-- A2 to Automate HA 
+- [A2 to Automate HA](#a2-to-automate-ha) 
 
-Performance benchmarking 
+[Performance benchmarking](#performance-benchmarking) 
 
-Certificates renewal
+[Certificates renewal](#certificates-renewal)
 
-Security and firewall 
-- Incoming frontends network traffic 
-- Incoming Elastic-search backend network traffic 
-- Incoming PostgreSQL backend network traffic 
+[Security and firewall](#security-and-firewall) 
+- [Incoming frontends network traffic](#incoming-frontends-network-traffic) 
+- [Incoming Elastic-search backend network traffic](#incoming-elastic-search-backend-network-traffic) 
+- [Incoming PostgreSQL backend network traffic](#incoming-postgreSQL-backend-network-traffic) 
 
-Troubleshooting guide
-- Restore issues 
-    - Error: Database is being accessed by other users 
-    - Error: Cached artifact not found in offline mode 
-    - Error: Existing arch does not match the requested one. 
-    - Other Errors
+[Troubleshooting guide](#troubleshooting-guide)
+- [Restore issues](#restore-issues) 
+    - [Error: Database is being accessed by other users](#error:-database-is-being-accessed-by-other-users) 
+    - [Error: Cached artifact not found in offline mode](#)
+    - [Error: Existing arch does not match the requested one](#) 
+    - [Other Errors](#)
 
-Appendix 
+[Appendix](#appendix) 
 
-- What to change in config.toml 
+- [What to change in config.toml](#what-to-change-in-config.toml) 
 
-- What to write in cidr block 
+- [What to write in cidr block](#what-to-write-in-cidr-block) 
 
-- How to set vpc 
+- [How to set vpc](#how-to-set-vpc)
 
 ## HA cluster introduction
 **High availability (HA)** refers to a system or application (such as a network, a server array, or cluster) that offers a high level of operational performance and quality over a relevant time with maximum potential uptime and accessibility for the content stored on it.
