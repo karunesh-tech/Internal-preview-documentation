@@ -16,7 +16,7 @@
 -   [Platform support](#platform-support)
 -   [Virtual Machine (VM) Instances Type](#virtual-machine-instances-type) 
 
-[Bastion host]](#bastion-host)
+[Bastion host](#bastion-host)
 -   [Bastion Introduction](#bastion-introduction) 
 -   [Bastion Host Setup](#bastion-host-setup) 
 
