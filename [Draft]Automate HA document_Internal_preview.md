@@ -339,7 +339,29 @@ This will give information about all server’s IP and automate’s URL deta
 
 This will give the status of frontend and backend node. 
 ## Air-gapped installation
-Need to ad steps for air-gapped installation.
+1) Download chef-automate cli using below command.
+	`curl https://packages.chef.io/files/current/latest/chef-automate-cli/chef-automate_linux_amd64.zip | gunzip - > chef-automate && chmod +x chef-automate`
+
+2) After downloading the chef-automate cli, make an airgap bundle using below command that will be used to deploy Automate HA. 	
+	`./chef-automate airgap bundle create`
+3) Now copy airgap bundle and chef-automate cli on your non-internet environment that we have downloaded using above two steps. You can use scp to copy. 
+	`scp -i your-private-key.pem airgap-bundle.aib user@destination-ip-addess-172-32-0-1:airgap-bundle.aib`
+	`scp -i your-private-key.pem chef-automate user@destination-ip-addess-172-32-0-1:chef-automate`
+	
+4) After copying two things just make sure that chef-automate cli has an executable permision assigned. If not provide permission using below command
+	`chmod +x chef-automate`
+
+5) Now login to your non-internet instance where you have copied airgap bundle and generate config.toml using below command. 
+	`./chef-automate init-config-ha existing_infra`
+
+6) Open config.toml and fill necessary details. Like ssh_user, ssh_key_file, fqdn, instance_count, automate_private_ip and other ips field.
+      ssh into your instance where you want to set SElinux config.
+     `sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config'
+      Reboot the instance after executing above command.
+7) If your instance is redhat then set SElinux config "enforcing" to "permissive" in all the nodes.
+
+8) Now start the deployment process using below command.
+	`./chef-automate deploy config.toml --airgap-bundle automate-20220113154113.aib`
 
 # Backup and restore
 Back-up configurations to be done before deploying cluster. 
