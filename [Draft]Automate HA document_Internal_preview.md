@@ -356,7 +356,7 @@ This will give the status of frontend and backend node. 
 
 6) Open config.toml and fill necessary details. Like ssh_user, ssh_key_file, fqdn, instance_count, automate_private_ip and other ips field.
       ssh into your instance where you want to set SElinux config.
-     `sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config'
+     `sudo sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config`
       Reboot the instance after executing above command.
 7) If your instance is redhat then set SElinux config "enforcing" to "permissive" in all the nodes.
 
